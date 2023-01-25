@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Mission from '../components/Mission/Mission';
 import EventsPricing from '../components/EventsPricing/EventsPricing';
 import OurTeam from '../components/OurTeam/OurTeam';
-
+import FlowersPricing from "../components/FlowersPricing/FlowersPricing"
 function Home() {
     return (
         <div>
@@ -15,7 +15,7 @@ function Home() {
 
             <HeroSection />
             <Mission />
-
+            <FlowersPricing />
             <EventsPricing />
             <OurTeam />
         </div>

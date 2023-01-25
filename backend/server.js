@@ -11,26 +11,18 @@ app.use(bodyParser.json());
 
 
 const { Schema } = mongoose;
-const userScheme = new Schema(
+const flowerScheme = new Schema(
     {
         name: {
             type: String,
             required: true
         },
-        surname: {
+        image: {
             type: String,
             required: true
         },
-        subject: {
-            type: String,
-            required: true
-        },
-        email: {
-            type: String,
-            required: true
-        },
-        message: {
-            type: String,
+        price: {
+            type: Number,
             required: true
         }
     },
@@ -38,7 +30,7 @@ const userScheme = new Schema(
 );
 
 mongoose.set('strictQuery', false);
-const Users = mongoose.model("users", userScheme);
+const Flowers = mongoose.model("flowers", flowerScheme);
 
 const PORT = process.env.PORT;
 const DB = process.env.DB_URL.replace("<password>", process.env.DB_PASSWORD)
@@ -52,8 +44,8 @@ mongoose.connect(DB, (err) => {
     }
 })
 
-app.get("/users", (req, res) => {
-    Users.find({}, (err, docs) => {
+app.get("/flowers", (req, res) => {
+    Flowers.find({}, (err, docs) => {
         if (!err) {
             res.send(docs);
         } else {
@@ -62,9 +54,9 @@ app.get("/users", (req, res) => {
     })
 })
 
-app.get("/users/:id", (req, res) => {
+app.get("/flowers/:id", (req, res) => {
     const { id } = req.params;
-    Users.findById(id, (err, docs) => {
+    Flowers.findById(id, (err, docs) => {
         if (!err) {
             if (docs) {
                 res.send(docs)
@@ -80,10 +72,10 @@ app.get("/users/:id", (req, res) => {
     })
 })
 
-app.post("/users", async (req, res) => {
+app.post("/flowers", async (req, res) => {
     const user = req.body
     try {
-        await Users.create(user)
+        await Flowers.create(user)
         res.status(200).json({
             message: "success"
         })
@@ -92,9 +84,9 @@ app.post("/users", async (req, res) => {
     }
 })
 
-app.delete("/users/:id", (req, res) => {
+app.delete("/flowers/:id", (req, res) => {
     const { id } = req.params;
-    Users.findByIdAndDelete(id, (err) => {
+    Flowers.findByIdAndDelete(id, (err) => {
         if (!err) {
             res.send("Successfully DELETE")
         } else {

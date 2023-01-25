@@ -1,0 +1,55 @@
+.flowers_pricing {
+    background-image: url("https://mobirise.com/extensions/floram4/floral-studio/assets/images/background1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .flowers_wrapper {
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            font-weight: 400;
+            font-size: 17px;
+            color: rgb(27, 116, 94);
+            font-style: italic;
+            font-family: 'Crimson Text', serif;
+        }
+
+        h5 {
+            font-weight: 400;
+            font-size: 21px;
+            color: rgb(27, 116, 94);
+        }
+
+        .flowers {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .flower {
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+                justify-content: center;
+
+                h3 {
+                    color: rgb(12, 91, 71);
+                    font-weight: 400;
+                }
+
+                button {
+                    padding: 10px 0 !important;
+                    border-radius: 20px
+                }
+            }
+        }
+    }
+}
