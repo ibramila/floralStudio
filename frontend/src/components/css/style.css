@@ -1,6 +1,50 @@
-.events {
-  background-image: url("https://mobirise.com/extensions/floram4/floral-studio/assets/images/background1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.team_intro {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.team_intro span {
+  font-weight: 400;
+  font-size: 17px;
+  color: rgb(27, 116, 94);
+  font-style: italic;
+  font-family: "Crimson Text", serif;
+}
+.team_intro h2 {
+  font-weight: 400;
+  font-size: 46px;
+  color: rgb(27, 116, 94);
+}
+.team_intro ul {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.team_intro ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.team_intro ul li h6 {
+  color: rgb(27, 116, 94);
+  font-weight: 400;
+}
+.team_intro ul li h6 span {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+}
+.team_intro ul li p {
+  width: 80%;
+  text-align: center;
+}
+.team_intro ul li h3 {
+  color: rgb(12, 91, 71);
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */

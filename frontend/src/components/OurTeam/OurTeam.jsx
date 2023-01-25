@@ -1,25 +1,25 @@
 import React from 'react'
 import "./style.scss"
-function EventsPricing() {
+import image5 from "../../assets/images/image5.jpg"
+import image6 from "../../assets/images/image6.jpg"
+import image7 from "../../assets/images/image7.jpg"
+
+function OurTeam() {
     return (
-        <section className='events'>
+        <section className='our_team'>
             <div className="container">
-                <div className="events_pricing">
-                    <span>Devoted to wonderful beauty
+                <div className="team_intro">
+                    <span>Contacts
                     </span>
-                    <h5>Events Pricing
-                    </h5>
-                    <ul className='cards'>
-                        <li className='card'>
-                            <h6>
-                                <span>$16</span>per table
-                            </h6>
-                            <h3> Birthday Events
+                    <h2>Our Team
+                    </h2>
+                    <ul className='team'>
+                        <li className='member'>
+                            <img src={image5} alt="portret1" />
+                            <h3> Velva Kopf
 
                             </h3>
-                            <p>Lorem ipsum dolor sit amet laudem partem perfecto per
-                            </p>
-                            <button>shop now</button>
+                            <span>Biologist</span>
                         </li>
                         <li className='card'>
                             <h6>
@@ -49,4 +49,4 @@ function EventsPricing() {
     )
 }
 
-export default EventsPricing
+export default OurTeam

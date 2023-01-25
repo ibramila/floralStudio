@@ -3,6 +3,7 @@ import HeroSection from '../components/HeroSection/HeroSection'
 import { Helmet } from 'react-helmet-async';
 import Mission from '../components/Mission/Mission';
 import EventsPricing from '../components/EventsPricing/EventsPricing';
+import OurTeam from '../components/OurTeam/OurTeam';
 
 function Home() {
     return (
@@ -16,7 +17,7 @@ function Home() {
             <Mission />
 
             <EventsPricing />
-
+            <OurTeam />
         </div>
     )
 }

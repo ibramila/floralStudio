@@ -19,14 +19,33 @@ code {
   list-style: none;
   text-decoration: none;
 }
-body{
+
+body {
   font-family: 'Poppins', sans-serif;
 }
+
 .container {
   width: 1140px;
   margin: 0 auto;
 }
-h5{
+
+h5 {
   font-size: 2.875rem;
-    font-weight: 600;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(27, 116, 94);
+}
+
+button {
+  width: 50%;
+  padding: 20px 30px;
+  border: none;
+  background-color: #d8e3d5;
+  cursor: pointer;
+  text-transform: capitalize;
+  color: #1b745e;
 }
