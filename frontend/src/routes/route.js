@@ -1,7 +1,10 @@
 import Home from "../pages/Home";
 import MainRoot from "../pages/MainRoot";
-import Dashboard from "../pages/Dashboard";
 import Add from "../pages/Add"
+import AboutUs from "../pages/AboutUs"
+import Contacts from "../pages/Contacts";
+import Portfolio from "../pages/Portfolio";
+import Pricing from "../pages/Pricing";
 
 export const ROUTES = [
     {
@@ -13,12 +16,23 @@ export const ROUTES = [
                 element: <Home />
             },
             {
-                path: "dashboard",
-                element: <Dashboard />
+                path: "aboutus",
+                element: <AboutUs />
             },
             {
                 path: "add",
                 element: <Add />
+            },
+            {
+                path: "contacts",
+                element: <Contacts />
+            }
+            , {
+                path: "portfolio",
+                element: <Portfolio />
+            }, {
+                path: "pricing",
+                element: <Pricing />
             }
         ]
     }
