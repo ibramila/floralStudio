@@ -1,1 +1,1 @@
-{"version":3,"sources":["../Navbar/style.scss","style.css"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,MAAA;ACCJ;ADCI;EACI,iBAAA;EACA,aAAA;EACA,mBAAA;EACA,gBAAA;ACCR;ADCQ;EACI,aAAA;EACA,SAAA;ACCZ;ADCY;EACI,YAAA;ACChB;ADEY;EACI,cAAA;ACAhB;;ADMA;EACI,YAAA;ACHJ","file":"style.css"}
+{"version":3,"sources":["../EventsPricing/style.scss","style.css"],"names":[],"mappings":"AAAA;EACI,4GAAA;EACA,2BAAA;EACA,4BAAA;EACA,sBAAA;ACCJ","file":"style.css"}

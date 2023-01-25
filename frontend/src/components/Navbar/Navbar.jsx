@@ -4,17 +4,16 @@ import { NavLink } from "react-router-dom";
 
 function NavbarSide() {
     const activeNavbar = {
-        fontSize: 25,
         fontWeight: 900,
-        color: "#7971ea"
+        color: "#faba84"
     }
     return (
         <>
-            <nav style={{ position: "absolute", zIndex: 999 }}>
+            <nav>
                 <div className='container'>
                     <div className='nav'>
+                        <div style={{fontWeight:900, color:"white"}}>FLORAL STUDIO</div>
                         <ul>
-                            <li style={{ fontWeight: 900, color: "white" }}>OneSchool</li>
                             <li>
                                 <NavLink style={({ isActive }) => (isActive ? activeNavbar : null)} to="/"> Home</NavLink>
 
@@ -23,7 +22,15 @@ function NavbarSide() {
                                 <NavLink style={({ isActive }) => (isActive ? activeNavbar : null)} to="/add"> Add</NavLink>
                             </li>
                             <li>
-                                <NavLink style={({ isActive }) => (isActive ? activeNavbar : null)} to="/dashboard"> Dashboard</NavLink>
+                                <NavLink style={({ isActive }) => (isActive ? activeNavbar : null)} to="/contacts"> Contacts</NavLink>
+                            </li>
+                            <li>
+                                <NavLink style={({ isActive }) => (isActive ? activeNavbar : null)} to="/aboutus"> About Us</NavLink>
+                            </li> <li>
+                                <NavLink style={({ isActive }) => (isActive ? activeNavbar : null)} to="/portfolio"> Portfolio</NavLink>
+                            </li> 
+                            <li>
+                                <NavLink style={({ isActive }) => (isActive ? activeNavbar : null)} to="/pricing"> Pricing</NavLink>
                             </li>
                         </ul>
                     </div>

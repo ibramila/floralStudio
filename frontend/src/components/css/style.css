@@ -1,24 +1,6 @@
-nav {
-  width: 100%;
-  top: 0;
-}
-nav .nav {
-  padding: 20px 0px;
-  display: flex;
-  flex-direction: row;
-  font-weight: 400;
-}
-nav .nav ul {
-  display: flex;
-  gap: 50px;
-}
-nav .nav ul a {
-  color: white;
-}
-nav .nav ul li:hover a {
-  color: #7971ea;
-}
-
-a {
-  color: white;
+.events {
+  background-image: url("https://mobirise.com/extensions/floram4/floral-studio/assets/images/background1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */

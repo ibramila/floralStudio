@@ -1,6 +1,8 @@
 import React from 'react'
 import HeroSection from '../components/HeroSection/HeroSection'
 import { Helmet } from 'react-helmet-async';
+import Mission from '../components/Mission/Mission';
+import EventsPricing from '../components/EventsPricing/EventsPricing';
 
 function Home() {
     return (
@@ -11,6 +13,9 @@ function Home() {
             </Helmet>
 
             <HeroSection />
+            <Mission />
+
+            <EventsPricing />
 
         </div>
     )
