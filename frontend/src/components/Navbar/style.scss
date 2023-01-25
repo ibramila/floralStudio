@@ -1,0 +1,28 @@
+nav {
+    width: 100%;
+    top: 0;
+
+    .nav {
+        padding: 20px 0px;
+        display: flex;
+        flex-direction: row;
+        font-weight: 400;
+
+        ul {
+            display: flex;
+            gap: 50px;
+
+            a {
+                color: white;
+            }
+
+            li:hover a {
+                color: #7971ea;
+            }
+        }
+    }
+}
+
+a {
+    color: white;
+}
