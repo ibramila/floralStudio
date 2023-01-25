@@ -17,30 +17,20 @@ function OurTeam() {
                         <li className='member'>
                             <img src={image5} alt="portret1" />
                             <h3> Velva Kopf
-
                             </h3>
                             <span>Biologist</span>
                         </li>
-                        <li className='card'>
-                            <h6>
-                                <span>$31</span>per table
-                            </h6>
-                            <h3> Wedding  Events
-
+                        <li className='member'>
+                            <img src={image6} alt="portret1" />
+                            <h3> Sarah Palmer
                             </h3>
-                            <p>Lorem ipsum dolor sit amet laudem partem perfecto per
-                            </p>
-                            <button>shop now</button>
+                            <span>Florist</span>
                         </li>
-                        <li className='card'>
-                            <h6>
-                                <span>$52</span>per table
-                            </h6>
-                            <h3> Party  Events
+                        <li className='member'>
+                            <img src={image7} alt="portret1" />
+                            <h3> Jessica Swift
                             </h3>
-                            <p>Lorem ipsum dolor sit amet laudem partem perfecto per
-                            </p>
-                            <button>shop now</button>
+                            <span>Photographer</span>
                         </li>
                     </ul>
                 </div>

@@ -14,7 +14,6 @@ function Mission() {
               </p>
               <button>read more</button>
             </div>
-
           </div>
           <div>
             <img src={image4} alt="image4" />

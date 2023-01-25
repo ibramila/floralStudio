@@ -1,0 +1,51 @@
+footer {
+    background-color: #e0ecdc;
+
+    .footer {
+        padding: 50px 0;
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+        align-items: flex-start;
+        justify-content: center;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            h5 {
+                font-size: 22px;
+                color: rgb(12, 91, 71);
+                font-weight: 400;
+            }
+
+            span {
+                font-size: 18px;
+                color: rgb(35, 35, 35);
+                font-family: 'Crimson Text', serif;
+
+            }
+
+            .email {
+                input {
+                    width: 70%;
+                    background-color: #e0ecdc;
+                    border: none;
+                    border-bottom: 1px solid black;
+                    padding: 20px 20px 10px 20px;
+                    font-family: 'Crimson Text', serif;
+                }
+
+                button {
+                    border: none;
+                    padding: 20px 20px 12px 20px;
+                    width: 20%;
+                    border-bottom: 1px solid black;
+
+                }
+            }
+
+        }
+    }
+}
