@@ -1,62 +1,45 @@
 import React, { useEffect, useState } from 'react'
 import { useForm } from "react-hook-form";
-import { loginFormSchema } from "../../schema/formSchema";
+import { postFormSchema } from "../../schema/postFormSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from 'axios';
 import "./style.scss"
 function AddSection() {
-    const [users, setUsers] = useState([]);
     const [state, setState] = useState({
-        name: "",
         image: "",
-        price: ""
+        name: "",
+        price: null
     });
 
+
+    //addProducts
+    const addProducts = () => {
+
+        if (!state.image || !state.name || !state.price ) return;
+
+        axios.post("http://www.localhost:3050/flowers", state);
+    };
+
+    //yup
     const {
         register,
         handleSubmit,
-        formState: { errors },
-    } = useForm({
-        resolver: yupResolver(loginFormSchema),
-    });
+        formState: { errors }
+    } = useForm({ resolver: yupResolver(postFormSchema) });
 
-
-    const getData = async () => {
-        const res = await axios.get("https://jsonplaceholder.typicode.com/users");
-        setUsers(res.data);
-        console.log(res.data)
-    };
-
-    useEffect(() => {
-        getData();
-    }, []);
-
-
-    const handleChange = (e) => {
-        setState({ ...state, [e.target.name]: e.target.value, [e.target.image]: e.target.value, [e.target.price]: e.target.value });
-
-    };
-
-
-    const formSubmit = (data) => {
+    const onSubmit = (data) => {
         console.log(data);
-        data.preventDefault();
-        axios.post("https://jsonplaceholder.typicode.com/users", state);
-        getData();
-        setState(
-            {
-                name: "",
-                age: "",
-                hobbies: ""
-            }
-        )
+        addProducts()
     };
-
+    const handleChange = (e) => {
+        setState({ ...state, [e.target.name]: e.target.value });
+    };
     return (
         <>
             <div className='form_wrapper'>
 
-                <form className='form' onSubmit={handleSubmit(formSubmit)}>
+                <form className='form' onSubmit={handleSubmit(onSubmit)}>
+                    <h1>Add image</h1>
                     <input {...register("name")}
                         value={state.name}
                         type="text"
@@ -84,7 +67,7 @@ function AddSection() {
                     )}
                     <input
                         {...register("price")}
-                        type="price"
+                        type="number"
                         name="price"
                         value={state.price}
                         id="price"
