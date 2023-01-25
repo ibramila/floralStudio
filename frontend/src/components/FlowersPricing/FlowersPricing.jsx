@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./style.scss"
 import img1 from "../../assets/images/APIimages/img1.jpg"
+import axios from "axios";
 
 function FlowersPricing() {
+    const URL = axios.create({
+        baseURL: "http://localhost:3050"
+    });
+
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        URL.get('/flowers').then((response) => {
+            setPosts(response.data);
+        });
+    }, []);
+
     return (
         <section className='flowers_pricing'>
             <div className="container">
@@ -12,42 +25,20 @@ function FlowersPricing() {
                     <h5>Flowers Pricing
                     </h5>
                     <ul className='flowers'>
-                        <li className='flower'>
-                            <img style={{width:"80%"}} src={img1} alt="img1" />
-                            <h3>Dahlia</h3>
-                            <span>$45</span>
-                            <button>Delete</button>
-                        </li>
-                        <li className='flower'>
-                            <img style={{width:"80%"}} src={img1} alt="img1" />
-                            <h3>Dahlia</h3>
-                            <span>$45</span>
-                            <button>Delete</button>
-                        </li> <li className='flower'>
-                            <img style={{width:"80%"}} src={img1} alt="img1" />
-                            <h3>Dahlia</h3>
-                            <span>$45</span>
-                            <button>Delete</button>
-                        </li> <li className='flower'>
-                            <img style={{width:"80%"}} src={img1} alt="img1" />
-                            <h3>Dahlia</h3>
-                            <span>$45</span>
-                            <button>Delete</button>
-                        </li> <li className='flower'>
-                            <img style={{width:"80%"}} src={img1} alt="img1" />
-                            <h3>Dahlia</h3>
-                            <span>$45</span>
-                            <button>Delete</button>
-                        </li> <li className='flower'>
-                            <img style={{width:"80%"}} src={img1} alt="img1" />
-                            <h3>Dahlia</h3>
-                            <span>$45</span>
-                            <button>Delete</button>
-                        </li>   
-                    </ul>
-                </div>
+                        {posts?.map((post) => {
+                            return (
+                                <li className='flower' key={post.id}>
+                                    <img style={{ width: "80%" }} src={post.image} alt="img1" />
+                                    <h3>{post.name}</h3>
+                                    <span>${post.price}</span>
+                                    <button>Delete</button>
+                                </li>
+                            );
+                        })}
+                </ul>
             </div>
-        </section>
+        </div>
+        </section >
     )
 }
 
