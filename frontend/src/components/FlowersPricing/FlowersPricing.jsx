@@ -16,6 +16,8 @@ function FlowersPricing() {
         });
     }, []);
 
+
+    
     return (
         <section className='flowers_pricing'>
             <div className="container">
@@ -35,9 +37,9 @@ function FlowersPricing() {
                                 </li>
                             );
                         })}
-                </ul>
+                    </ul>
+                </div>
             </div>
-        </div>
         </section >
     )
 }

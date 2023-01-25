@@ -1,48 +1,35 @@
-.flowers_pricing {
-  background-image: url("https://mobirise.com/extensions/floram4/floral-studio/assets/images/background1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.flowers_pricing .flowers_wrapper {
-  padding: 50px 0;
+.form_wrapper {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
   align-items: center;
   justify-content: center;
 }
-.flowers_pricing .flowers_wrapper span {
-  font-weight: 400;
-  font-size: 17px;
-  color: rgb(27, 116, 94);
-  font-style: italic;
-  font-family: "Crimson Text", serif;
-}
-.flowers_pricing .flowers_wrapper h5 {
-  font-weight: 400;
-  font-size: 21px;
-  color: rgb(27, 116, 94);
-}
-.flowers_pricing .flowers_wrapper .flowers {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-.flowers_pricing .flowers_wrapper .flowers .flower {
-  width: 30%;
+.form_wrapper .form {
+  border: none;
+  border-radius: 10px;
+  margin: 50px 0;
+  width: 50%;
+  top: 50%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  align-items: center;
-  justify-content: center;
+  gap: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
-.flowers_pricing .flowers_wrapper .flowers .flower h3 {
-  color: rgb(12, 91, 71);
-  font-weight: 400;
+.form_wrapper .form input {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
 }
-.flowers_pricing .flowers_wrapper .flowers .flower button {
-  padding: 10px 0 !important;
-  border-radius: 20px;
+.form_wrapper .form input:focus, .form_wrapper .form input:hover {
+  border: 1px solid 0;
+}
+.form_wrapper .form button {
+  background-color: 0;
+  color: white;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  align-self: center;
+  border: 1px solid lightgray;
 }/*# sourceMappingURL=style.css.map */
